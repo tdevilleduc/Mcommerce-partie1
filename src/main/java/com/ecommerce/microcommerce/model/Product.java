@@ -77,4 +77,8 @@ public class Product {
                 ", prix=" + prix +
                 '}';
     }
+
+    public int getMarge(){
+        return prix - prixAchat;
+    }
 }
