@@ -110,4 +110,9 @@ public class ProductController {
                 .collect(Collectors.toMap(Product::toString, p -> p.getMarge()));
     }
 
+    @GetMapping(value = "/ProduitsParOrdreAlphabetique")
+    public List<Product> trierProduitsParOrdreAlphabetique() {
+        return productDao.findAllByOrderByNomAsc();
+    }
+
 }
